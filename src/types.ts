@@ -10,6 +10,8 @@ declare global {
 }
 
 export interface ClockWeatherCardConfig extends LovelaceCardConfig {
+  cycle_display?: number; // 0 disables cycling, otherwise specifies seconds for cycling
+  displayed_temperature?: 'current' | 'apparent' | 'outdoor';
   entity: string
   title?: string
   sun_entity?: string
