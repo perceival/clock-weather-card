@@ -25,6 +25,8 @@ export default css`
     opacity: 0.8;
     position: relative; /* Ensure proper positioning */
     z-index: 2; /* Bring the icon below other elements */
+    height: 120px !important;  /* Increase as needed */
+    width: auto !important;
   }
 
   clock-weather-card-today-right {
