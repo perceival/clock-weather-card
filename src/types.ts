@@ -33,6 +33,8 @@ export interface ClockWeatherCardConfig extends LovelaceCardConfig {
   show_decimal?: boolean
   apparent_sensor?: string
   aqi_sensor?: string
+  cycle_display?: number; // 0 disables cycling, otherwise specifies seconds for cycling
+  displayed_temperature?: 'current' | 'apparent' | 'outdoor';
 }
 
 export interface MergedClockWeatherCardConfig extends LovelaceCardConfig {

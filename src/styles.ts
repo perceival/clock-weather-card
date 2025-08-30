@@ -2,60 +2,66 @@ import { css } from 'lit'
 
 export default css`
 
-  ha-card {
-    --bar-height: 1.5rem;
-    height: 100%;
-  }
+ha-card {
+  --bar-height: 1.5rem;
+  height: 100%;
+}
 
-  clock-weather-card-today {
-    display: flex;
-  }
+clock-weather-card-today {
+  display: flex;
+}
 
-  clock-weather-card-today-left {
-    display: flex;
-    width: 35%;
-    align-items: center;
-    justify-content: center;
-  }
+clock-weather-card-today-left {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
 
-  .grow-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
+.grow-img {
+  max-width: 150%; /* Increase the size of the weather icon */
+  max-height: 150%;
+  opacity: 0.8;
+  position: relative; /* Ensure proper positioning */
+  z-index: 3; /* Bring the icon above other elements */
+}
 
-  clock-weather-card-today-right {
-    display: flex;
-    width: 65%;
-    justify-content: space-around;
-    align-items: center;
-  }
+clock-weather-card-today-right {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2; /* Ensure it is below the icon */
+}
 
-  clock-weather-card-today-right-wrap {
-    display: flex;
-    flex-direction: column;
-  }
+clock-weather-card-today-right-wrap {
+  display: flex;
+  flex-direction: column;
+}
 
-  clock-weather-card-today-right-wrap-top {
-    width: 100%;
-    text-align: end;
-    display: block;
-  }
+clock-weather-card-today-right-wrap-top {
+  width: 100%;
+  text-align: end;
+  display: block;
+}
 
-  clock-weather-card-today-right-wrap-center {
-    display: flex;
-    height: 4rem;
-    font-size: 3.5rem;
-    white-space: nowrap;
-    align-items: center;
-    justify-content: center;
-  }
+clock-weather-card-today-right-wrap-center {
+  display: flex;
+  height: 8rem;
+  font-size: 7rem;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease; /* Smooth transitions for swapping content */
+}
 
-  clock-weather-card-today-right-wrap-bottom {
-    display: flex;
-    justify-content: start;
-  }
+clock-weather-card-today-right-wrap-bottom {
+  display: flex;
+  justify-content: start;
+}
 
-  clock-weather-card-forecast {
+clock-weather-card-forecast {
     display: block;
   }
 
